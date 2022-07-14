@@ -1,7 +1,7 @@
 // check wheather the traingle is isoscales,equilateral,scalene,right-angled?
 // isoscale = two equal sides, equilateral = all equal sides,
 // scalene = none equal sides, right-angeled = (hy^2 = per^2 + base^2)
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     int hypontenuse,perpendiculer,base;
     printf("\n Enter length of three sides of the traingle: ");
@@ -68,7 +68,7 @@ int main(){
     
     printf("CMYK : %f %f %f %f", cyan,magenta,yellow,black);
     return 0;
-} */
+} 
 
 
 
@@ -108,6 +108,51 @@ int main(){
     else
     {
         printf("\n Grade of the stell is 6");
+    }
+    return 0;
+} 
+
+
+
+// calculate BMI
+// BMI = weight / (height x height);
+#include <stdio.h>
+int main(){
+    float weight,height,bmi;
+    printf("\n Enter your weight(in kg): ");
+    scanf("%f", &weight);
+    printf("\n Enter your height in meter: ");
+    scanf("%f", &height);
+
+    bmi = weight / (height * height);
+
+    if (bmi < 15)
+    {
+        printf("\n Your BMI is %f: & you are in Starvation catagory ", bmi);
+    }
+    else if (bmi >= 15.1 && bmi <= 17.5)
+    {
+        printf("\n Your BMI is %f: & you are in Anorexic catagory ", bmi);
+    }
+    else if (bmi >= 17.6 && bmi <= 18.5)
+    {
+        printf("\n Your BMI is %f: & you are in UnderWeight catagory ", bmi);
+    }
+    else if (bmi >= 18.6 && bmi <= 24.9)
+    {
+        printf("\n Your BMI is %f: & you are in Ideal catagory ", bmi);
+    }
+    else if (bmi >= 25 && bmi <= 25.9)
+    {
+        printf("\n Your BMI is %f: & you are in OverWeight catagory ", bmi);
+    }
+    else if (bmi >= 30 && bmi <= 30.9)
+    {
+        printf("\n Your BMI is %f: & you are in Obese catagory ", bmi);
+    }
+    else if (bmi >= 40)
+    {
+        printf("\n Your BMI is %f: & you are in Morbidly Obese catagory ", bmi);
     }
     return 0;
 }
