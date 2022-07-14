@@ -1,5 +1,5 @@
-// iprofit or loss check
-#include <stdio.h>
+// profit or loss check
+/*#include <stdio.h>
 int main(){
     int cost_price,sell_price,profit,loss;
     printf("\nEnter the cost price of youer product = \n");
@@ -41,7 +41,7 @@ int main(){
         printf("This is a odd number");
     }
     return 0;
-} 
+} */
 
 
 
@@ -52,7 +52,7 @@ int main(){
     printf("\n Enter any year to check leap year :");
     scanf("%d", &year);
 
-    if (year % 4 == 0 || year % 100 == 0 || year % 400 == 0)
+    if (year % 400 == 0 || year % 100 != 0 && year % 4 == 0)
     {
         printf("%d is a leap year \n",year);
     }
