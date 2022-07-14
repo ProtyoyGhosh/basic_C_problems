@@ -1,5 +1,5 @@
 // profit or loss check
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     int cost_price,sell_price,profit,loss;
     printf("\nEnter the cost price of youer product = \n");
@@ -41,7 +41,7 @@ int main(){
         printf("This is a odd number");
     }
     return 0;
-} */
+} 
 
 
 
