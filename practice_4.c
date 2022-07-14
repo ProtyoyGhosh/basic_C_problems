@@ -21,7 +21,7 @@ int main(){
     }
     if (hypontenuse * hypontenuse == (perpendiculer * perpendiculer) + (base * base))
     {
-        printf("\n This is right angled triangle because a(sqr) = b(sqr) + c(sqr)");
+        printf("\n This is right angled triangle because it has: a(sqr) = b(sqr) + c(sqr)");
     }
     
     return 0;
