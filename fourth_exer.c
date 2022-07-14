@@ -1,5 +1,5 @@
 // calculate salary from user input information
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     int year_of_service,qualification,salary;
     char gender;
@@ -137,7 +137,7 @@ int main(){
     }
     
     return 0;
-} */
+} 
 
 
 
