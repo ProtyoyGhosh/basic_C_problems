@@ -25,7 +25,7 @@ int main(){
     }
     
     return 0;
-} */
+} 
 
 
 
@@ -67,5 +67,47 @@ int main(){
     }
     
     printf("CMYK : %f %f %f %f", cyan,magenta,yellow,black);
+    return 0;
+} */
+
+
+
+// check the grade of steel
+#include <stdio.h>
+int main(){
+    int hardness,tensile_strength;
+    float carbon_content;
+
+    printf("\n Enter the hardness of the steel (greater than 50 is recommended) : ");
+    scanf("%d", &hardness);
+    printf("\n Enter the carbon content of the steel (less than 0.7 is recommended) : ");
+    scanf("%f", &carbon_content);
+    printf("\n Enter the tensile strength of the steel (greater than 5600 is recommended) : ");
+    scanf("%d", &tensile_strength);
+
+    if (hardness > 50 && carbon_content < 0.7 && tensile_strength > 5600)
+    {
+        printf("\n Grade of the steel is 10");
+    }
+    else if (hardness > 50 && carbon_content < 0.7)
+    {
+        printf("\n Grade of the stell is 9");
+    }
+    else if (carbon_content < 0.7 && tensile_strength > 5600)
+    {
+        printf("\n Grade of the stell is 8");
+    }
+    else if (hardness > 50 && tensile_strength > 5600)
+    {
+        printf("\n Grade of the stell is 7");
+    }
+    else if (hardness > 50 || carbon_content < 0.7 || tensile_strength > 5600)
+    {
+         printf("\n Grade of the stell is 7");
+    }
+    else
+    {
+        printf("\n Grade of the stell is 6");
+    }
     return 0;
 }
