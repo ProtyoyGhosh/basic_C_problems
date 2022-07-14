@@ -106,7 +106,7 @@ else
 }
 return 0;
 
-} */
+} 
 
 
 
@@ -134,6 +134,54 @@ int main(){
     else
     {
         printf("\n The charecter is a special symbol");
+    }
+    
+    return 0;
+} */
+
+
+
+// from three input values of the side check if the traingle is valid or not
+// The traingle is valid if the sum of two sides is greater than the largest side input
+#include <stdio.h>
+int main(){
+    int side1,side2,side3,larger_side,sum;
+    printf("\n Enter the three sides of traingle: ");
+    scanf("%d %d %d", &side1,&side2,&side3);
+
+    if (side1 > side2)
+    {
+        if (side1 > side3)
+        {
+            sum = side2 + side3; larger_side = side1 ;
+        }
+        else
+        {
+            sum = side1 + side2; larger_side = side3;
+        }
+        
+    }
+
+    else
+    {
+        if (side2 > side3)
+        {
+            sum = side1 + side3; larger_side = side2;
+        }
+        else
+        {
+            sum = side1 + side2; larger_side = side3;
+        }
+        
+    }
+
+    if (sum > larger_side)
+    {
+        printf("\n This is a valid traingle");
+    }
+    else
+    {
+        printf("\n This is not a valid traingle");
     }
     
     return 0;
