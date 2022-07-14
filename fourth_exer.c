@@ -1,5 +1,5 @@
 // calculate salary from user input information
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     int year_of_service,qualification,salary;
     char gender;
@@ -106,4 +106,35 @@ else
 }
 return 0;
 
-} 
+} */
+
+
+
+// charecter is in capital letter?small case? digit or sysmbol?
+// charecters & their ASCII values below >>>
+// A-Z(65-90), a-z(97-122), 0-9(48-57), symbols(0-47) / (58-64) / (91-96) / (123-127)
+#include <stdio.h>
+int main(){
+    char ch;
+    printf("\n Enter any charecter: ");
+    scanf("%c", &ch);
+
+    if (ch >= 65 && ch<= 90)
+    {
+        printf("\n The charecter is an upper case letter");
+    }
+    else if (ch >= 97 && ch <= 122)
+    {
+        printf("\n The chrecter is a lower case letter");
+    }
+    else if (ch >= 48 && ch <= 57)
+    {
+        printf("\n The charecter is a digit");
+    }
+    else
+    {
+        printf("\n The charecter is a special symbol");
+    }
+    
+    return 0;
+}
