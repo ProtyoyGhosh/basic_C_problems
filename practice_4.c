@@ -155,4 +155,32 @@ int main(){
         printf("\n Your BMI is %f: & you are in Morbidly Obese catagory ", bmi);
     }
     return 0;
+} 
+
+
+
+// find greatest of three number entered
+#include<stdio.h>
+int main(){
+    float num1,num2,num3,greatest_num;
+    printf("\n Enter 3 number: ");
+    scanf("%f %f %f", &num1,&num2,&num3);
+
+    if (num1 > num2 && num1 > num3)
+    {
+        greatest_num = num1;
+        printf("Greatest number: %f",greatest_num);
+    }
+    if (num2 > num1 && num2 > num3)
+    {
+        greatest_num = num2;
+        printf("Greatest number: %f",greatest_num);
+    }
+    if (num3 > num1 && num3 > num2)
+    {
+        greatest_num = num3;
+        printf("Greatest number: %f",greatest_num);
+    }
+    
+    return 0;
 }
