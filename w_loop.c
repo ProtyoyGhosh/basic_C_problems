@@ -1,5 +1,5 @@
 // calculate overtime pay of 5 employees using while loop
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     float ot_pay;
     int hour, i=0;
@@ -20,5 +20,24 @@ int main(){
         }
         i++ ;
     }
+    return 0;
+} */
+
+
+
+
+// find the factorial value
+#include <stdio.h>
+int main(){
+    int num,fact,i;
+    printf("\n Enter any number: ");
+    scanf("%d",&num);
+    fact = i = 1;
+    while (i <= num)
+    {
+        fact = fact * i;
+        i++ ;
+    }
+    printf("\n The factorial of %d is = %d\n", num,fact);
     return 0;
 }
