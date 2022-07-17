@@ -21,7 +21,7 @@ int main(){
         i++ ;
     }
     return 0;
-} */
+} *
 
 
 
@@ -39,5 +39,25 @@ int main(){
         i++ ;
     }
     printf("\n The factorial of %d is = %d\n", num,fact);
+    return 0;
+} */
+
+
+
+// finding raised to the power of two given number
+#include<stdio.h>
+int main(){
+    int i;
+    float num1,num2,power;
+    printf("\n Enter two numbers: ");
+    scanf("%f %f", &num1,&num2);
+
+    power=i=1;
+    while (i<=num2)
+    {
+        power = power * num1;
+        i++;
+    }
+    printf("\n %f to the power %f is = %f",num1,num2,power);
     return 0;
 }
