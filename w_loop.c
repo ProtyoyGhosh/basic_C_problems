@@ -60,7 +60,7 @@ int main(){
     }
     printf("\n %f to the power %f is = %f",num1,num2,power);
     return 0;
-} */
+} 
 
 
 
@@ -86,4 +86,22 @@ int main(){
         count ++;
     }
     return 0;
+} */
+
+
+
+// finding all the ASCII values between 0-255
+#include <stdio.h>
+int main(){
+    int numbers = 0;
+    while (numbers<=255)
+    {
+        printf("%c = %d\n",numbers,numbers);
+        numbers ++;
+    }
+    
+    return 0;
 }
+
+
+
