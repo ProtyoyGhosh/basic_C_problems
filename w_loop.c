@@ -40,7 +40,7 @@ int main(){
     }
     printf("\n The factorial of %d is = %d\n", num,fact);
     return 0;
-} */
+} 
 
 
 
@@ -59,5 +59,31 @@ int main(){
         i++;
     }
     printf("\n %f to the power %f is = %f",num1,num2,power);
+    return 0;
+} */
+
+
+
+// printing all the armstrong number between 1 to 500
+#include<stdio.h>
+int main(){
+    int num,count=1,rem,sum;
+    while (count <= 500)
+    {
+        num = count;
+        sum = 0;
+    
+        while (num)
+        {
+            rem = num % 10;
+            sum = sum + (rem*rem*rem);
+            num =num/10;
+        }
+        if (count == sum)
+        {
+            printf("\n %d is an armstrong number\n", count);
+        }
+        count ++;
+    }
     return 0;
 }
