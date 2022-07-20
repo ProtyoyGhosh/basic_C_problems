@@ -86,7 +86,7 @@ int main(){
         count ++;
     }
     return 0;
-} */
+} 
 
 
 
@@ -101,6 +101,52 @@ int main(){
     }
     
     return 0;
+} */
+
+
+
+
+// matchstick game
+/* Write a C program for a matchstick game being played between the computer and a user. 
+Your program should ensure that the computer always wins. Rules for the game are as follows:
+– There are 21 matchsticks.
+– The computer asks the player to pick 1, 2, 3 or 4 matchsticks.
+– After the person picks, the computer does its picking.
+– Whoever is forced to pick up the last matchstick loses the game 
+
+**The trick is, computers pick is always 5 minus the pick of the user. 
+For example, if computers pick is variable c and user pick is stored in variable p, then:
+c = 5 – p;
+This makes sure computer always wins the game. That is, the last pick will always be of the user
+*/
+
+#include <stdio.h>
+int main(){
+    int match_num = 21,player,computer;
+    while (1)
+    {
+        printf("\n No of MatchStick left = %d", match_num);
+        printf("\nPlease pick 1 or 2 or 3 or 4 MatchSticks:\n");
+        scanf("%d",&player);
+
+        if(player > 4 || player < 1)
+            continue;
+
+        match_num = match_num - player;
+        printf("\nNo of MatchStick left = %d",match_num);
+
+        computer = 5 - player;
+        printf("\nComputer has pick %d no of MatchSticks", computer);
+        match_num = match_num - computer;
+
+        if (match_num ==1)
+        {
+            printf("\nNo of MatchStick left = %d",match_num);
+            printf("\n You have lost the game.......!!");
+            break;
+        }
+    }
+    
 }
 
 
