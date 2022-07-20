@@ -101,7 +101,7 @@ int main(){
     }
     
     return 0;
-} */
+} 
 
 
 
@@ -120,7 +120,7 @@ c = 5 – p;
 This makes sure computer always wins the game. That is, the last pick will always be of the user
 */
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(){
     int match_num = 21,player,computer;
     while (1)
@@ -147,6 +147,34 @@ int main(){
         }
     }
     
+} */
+
+
+
+
+// intiger to octalconverstion
+#include<stdio.h>
+int main(){
+    int num,r,res=0,oct;
+    printf("\n Enter an intiger value: ");
+    scanf("%d",&num);
+    r=num;
+
+    // getting the remainder
+    while (r != 0)
+    {
+        res = res * 10 + r % 8;
+        r = r/8;
+    }
+
+    // reverse the number
+    while (res != 0)
+    {
+        oct = oct * 10 + res % 10;
+        res = res / 10;
+    }
+    
+    printf("The octal of %d is = %d", num,oct);
 }
 
 
