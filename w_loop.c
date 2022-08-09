@@ -1,5 +1,5 @@
 // calculate overtime pay of 5 employees using while loop
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     float ot_pay;
     int hour, i=0;
@@ -120,7 +120,7 @@ c = 5 – p;
 This makes sure computer always wins the game. That is, the last pick will always be of the user
 */
 
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     int match_num = 21,player,computer;
     while (1)
@@ -147,12 +147,12 @@ int main(){
         }
     }
     
-} */
+} 
 
 
 
 
-// intiger to octalconverstion
+// intiger to octal converstion
 #include<stdio.h>
 int main(){
     int num,r,res=0,oct;
