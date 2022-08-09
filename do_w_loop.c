@@ -1,5 +1,5 @@
 // wrtite a program to determine a number is prime or not
-/*#include <stdio.h>
+#include <stdio.h>
 int main(){
     int num,i;
     printf("Enter a number: \n");
@@ -96,7 +96,7 @@ int main(){
     }
     printf("Factorial of %d is =%d", num, fact);
     return 0 ;
-}*/
+}
 
 
 
@@ -112,4 +112,4 @@ int main(){
         printf("%d * %d = %d\n", i,num,cal);
     }
     return 0;
-}
+} 
