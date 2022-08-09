@@ -61,7 +61,7 @@ int main(){
        
     }
     return 0; 
-}*/
+}
 
 
 
@@ -79,4 +79,21 @@ int main(){
         printf("%d\t",i);
     }
     return 0;
+}*/
+
+
+
+// print factorial of a given number
+#include <stdio.h>
+int main(){
+    int num,i;
+    printf("Enter a number: \n");
+    scanf("%d",&num);
+    int fact = 1;
+    for ( i = 1; i <= num; i++)
+    {
+        fact = fact * i;  
+    }
+    printf("Factorial of %d is =%d", num, fact);
+    return 0 ;
 }
