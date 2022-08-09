@@ -79,7 +79,7 @@ int main(){
         printf("%d\t",i);
     }
     return 0;
-}*/
+}
 
 
 
@@ -96,4 +96,20 @@ int main(){
     }
     printf("Factorial of %d is =%d", num, fact);
     return 0 ;
+}*/
+
+
+
+// print reverse of the table of a given number
+#include <stdio.h>
+int main(){
+    int i,num,cal = 1;
+    printf("Enter a number: \n");
+    scanf("%d",&num);
+    for ( i = 10; i >= 1; i--)
+    {
+        cal = i * num;
+        printf("%d * %d = %d\n", i,num,cal);
+    }
+    return 0;
 }
