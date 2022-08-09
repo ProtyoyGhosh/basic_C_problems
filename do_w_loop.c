@@ -38,7 +38,7 @@ int main(){
         scanf("%c",&another);
     } while (another == 'y');
     return 0;
-}*/
+}
 
 
 
@@ -49,7 +49,6 @@ int main(){
     printf("Prime numbers between 1 to 300 are : \n1\t");
     for ( n = 1; n < 300; n++)
     {
-        // i = 2;
         for ( i = 2; i < n; i++)
         {
             if (n % i == 0)
@@ -62,4 +61,22 @@ int main(){
        
     }
     return 0; 
+}*/
+
+
+
+
+// print all the odd numbers between 5 to 50
+#include <stdio.h>
+int main(){
+    int i;
+    for ( i = 5; i < 50; i++)
+    {
+        if (i % 2 == 0)
+        {
+            continue;
+        }
+        printf("%d\t",i);
+    }
+    return 0;
 }
