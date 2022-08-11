@@ -1,5 +1,5 @@
 // multiplication table
-/*#include <stdio.h>
+#include <stdio.h>
 int main (){
     int n;
     printf("\n Enter any no for its multiplication table: ");
@@ -10,7 +10,7 @@ int main (){
         printf("%d \n", n*i);
     }
     return 0;
-}*/
+}
 
 
 
