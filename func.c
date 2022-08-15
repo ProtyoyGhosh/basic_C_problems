@@ -21,7 +21,7 @@
 
 
 // write a function that print Namaste if the user is indian & Bonjure if the user french
-#include<stdio.h>
+// #include<stdio.h>
 /*void ind_user();
 void french_user();
 
@@ -100,7 +100,7 @@ float rectArea(float a, float b){
 
 
 // factorial of n      if n=5, 1*2*3*4*5, fact of 5 is = (n-1) * 5,fact of 4 is = (n-1) * 4 ....goes on till n = 1;
-#include<stdio.h>
+/*#include<stdio.h>
 int fact(int n);
 int main(){
     int user;
@@ -118,4 +118,21 @@ int fact(int n){
     int fact_minus_1 = fact(n-1);
     int factN = fact_minus_1 * n;
     return factN;
+}*/
+
+
+
+
+// write a function to convert celsius to farenhite    f = (c * 9/5)+32
+#include<stdio.h>
+float celToFaren(float cel);
+int main(){
+    float c;
+    printf("Enter the temperature in celsius: \n");
+    scanf("%f",&c);
+    printf("Temperature in farenhite is= %f\n",celToFaren(c));
+    return 0;
+}
+float celToFaren(float cel){
+    return (cel * 0.18) + 32;
 }
