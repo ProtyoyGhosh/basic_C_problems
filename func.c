@@ -118,7 +118,7 @@ int fact(int n){
     int fact_minus_1 = fact(n-1);
     int factN = fact_minus_1 * n;
     return factN;
-}*/
+}
 
 
 
@@ -135,4 +135,25 @@ int main(){
 }
 float celToFaren(float cel){
     return (cel * 0.18) + 32;
+}*/
+
+
+
+
+// write a function to calculate pertcentage of a students from marks in English,Science & Math
+#include<stdio.h>
+float per_marks(float mark_eng,float mark_sci,float mark_math);
+int main(){
+    int e,s,m;
+    printf("Enter marks of English: \n");
+    scanf("%d",&e);
+    printf("Enter marks of Science: \n");
+    scanf("%d",&s);
+    printf("Enter marks of Math: \n");
+    scanf("%d",&m);
+    printf("Percentage of marks = %f\n",per_marks(e,s,m));
+    return 0;
+}
+float per_marks(float mark_eng,float mark_sci,float mark_math){
+    return (mark_eng + mark_sci + mark_math)/3;
 }
