@@ -99,7 +99,7 @@ float rectArea(float a, float b){
 
 
 
-// factorial of n      if n=5, 1*2*3*4*5, multi of 5 is = (n-1) * 5,multi of 4 is = (n-1) * 4 ....goes on till n = 1;
+// factorial of n      if n=5, 1*2*3*4*5, fact of 5 is = (n-1) * 5,fact of 4 is = (n-1) * 4 ....goes on till n = 1;
 #include<stdio.h>
 int fact(int n);
 int main(){
@@ -117,4 +117,5 @@ int fact(int n){
     
     int fact_minus_1 = fact(n-1);
     int factN = fact_minus_1 * n;
+    return factN;
 }
