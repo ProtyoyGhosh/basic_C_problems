@@ -1,28 +1,28 @@
 // function structure
 // #include<stdio.h>
 
-// void printHello();   /*function prototype*/
-// void printGoodbye();
+void printHello();   /*function prototype*/
+void printGoodbye();
 
-// int main(){
-//     printHello();     /*function call*/
-//     printGoodbye();
+int main(){
+    printHello();     /*function call*/
+    printGoodbye();
 
-//     return 0;
-// }
+    return 0;
+}
 
-// void printHello(){
-//     printf("Hello function!!\n");    /*function declaration*/
-// }
-// void printGoodbye(){
-//     printf("Good Bye");
-// }
+void printHello(){
+    printf("Hello function!!\n");    /*function declaration*/
+}
+void printGoodbye(){
+    printf("Good Bye");
+}
 
 
 
 // write a function that print Namaste if the user is indian & Bonjure if the user french
 // #include<stdio.h>
-/*void ind_user();
+void ind_user();
 void french_user();
 
 int main(){
@@ -72,35 +72,35 @@ float squareArea(float a){
 }
 float rectArea(float a, float b){
     return a * b;
-} */
+} 
 
 
 
 // Recursion...........................................
 // print sum of first n natural number
-// #include<stdio.h>
-// int sum(int n);
-// int main(){
-//     printf("sum of first natural number of 5 is = %d",sum(5));
-//     return 0;
-// }
-// int sum(int n){
-//     if (n == 1)  /*base case where exicution stsrt & program finish*/
-//     {
-//         return 1;
-//     }
+#include<stdio.h>
+int sum(int n);
+int main(){
+    printf("sum of first natural number of 5 is = %d",sum(5));
+    return 0;
+}
+int sum(int n){
+    if (n == 1)  /*base case where exicution stsrt & program finish*/
+    {
+        return 1;
+    }
     
-//     int sum_minus_n = sum(n-1);   /*n= 5 - 1+2+3+4+5 which written as (n-1)+n where n =5
-//     summery is sum of 5 think firstly calculate sum of 4 then add 5, then sum of 4 think 
-//     first add sum of 3 then add 4 and the process continue........*/
-//     int sumN = sum_minus_n + n;
-// }
+    int sum_minus_n = sum(n-1);   /*n= 5 - 1+2+3+4+5 which written as (n-1)+n where n =5
+    summery is sum of 5 think firstly calculate sum of 4 then add 5, then sum of 4 think 
+    first add sum of 3 then add 4 and the process continue........*/
+    int sumN = sum_minus_n + n;
+}
 
 
 
 
 // factorial of n      if n=5, 1*2*3*4*5, fact of 5 is = (n-1) * 5,fact of 4 is = (n-1) * 4 ....goes on till n = 1;
-/*#include<stdio.h>
+#include<stdio.h>
 int fact(int n);
 int main(){
     int user;
@@ -156,12 +156,12 @@ int main(){
 }
 float per_marks(float mark_eng,float mark_sci,float mark_math){
     return (mark_eng + mark_sci + mark_math)/3;
-}*/
+}
 
 
 
 
-// Write a function to print n number of fibonacci series        
+// Write a function to print nth number of fibonacci series        
 /*              0,1,1,2,3,5,8,13,21,34...
                 for 3 step fibonacci series - fib(3-2) + fib(3-1) = 1 + 1 =2
                 for 4 step fibonacci series - fib(4-2) + fib(4-1) = 1 + 2 =3
@@ -192,4 +192,86 @@ int fibo_func(int step){
     int fiboN = step_minus1 + step_minus2;
     // printf("%d\t",fiboN);
     return fiboN;
+}
+
+
+
+
+//write a function to calculate sum of digits of a input number
+#include<stdio.h>
+int sum_digits(int num);
+int main(){
+    int n;
+    printf("Enter a number: \n");
+    scanf("%d",&n);
+    printf("Sum of its digits= %d\n",sum_digits(n));
+    return 0;
+}
+int sum_digits(int num){
+    int sum = 0,m;
+    while (num > 0)
+    {
+        m = num % 10;
+        sum = sum + m;
+        num = num/10;
+    }
+    return sum;
+} 
+
+
+
+
+// write a function to find square root of a given number
+#include<stdio.h>
+#include<math.h>
+float sqr_root(float num);
+int main(){
+    float n;
+    printf("Enter a number: \n");
+    scanf("%f",&n);
+    printf("Square root of %f is = %f", n,sqr_root(n));
+    return 0;
+}
+float sqr_root(float num){
+    return sqrt(num);
+}
+
+
+
+
+// write a function to print "Hot" or "Cold" depending o the temperature user enter
+#include<stdio.h>
+char temp(int num);
+int main(){
+    int n;
+    printf("Enter the temperature: \n");
+    scanf("%d",&n);
+    printf("%c",temp(n));
+    return 0;
+}
+char temp(int num){
+    if (num >= 30)
+    {
+        printf("Its Hotttttttt...!!");
+    }else
+    {
+        printf("Its Colddddddd....!!");
+    }
+} 
+
+
+
+
+// make your own POW function
+#include<stdio.h>
+int pow_func(int num);
+int main(){
+    int n;
+    printf("Enter a number :\n");
+    scanf("%d",&n);
+    printf("Square of %d is = %d",n,pow_func(n));
+    return 0;
+}
+int pow_func(int num){
+    return num * num;
 }
