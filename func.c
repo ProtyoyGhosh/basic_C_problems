@@ -135,7 +135,7 @@ int main(){
 }
 float celToFaren(float cel){
     return (cel * 0.18) + 32;
-}*/
+}
 
 
 
@@ -156,4 +156,40 @@ int main(){
 }
 float per_marks(float mark_eng,float mark_sci,float mark_math){
     return (mark_eng + mark_sci + mark_math)/3;
+}*/
+
+
+
+
+// Write a function to print n number of fibonacci series        
+/*              0,1,1,2,3,5,8,13,21,34...
+                for 3 step fibonacci series - fib(3-2) + fib(3-1) = 1 + 1 =2
+                for 4 step fibonacci series - fib(4-2) + fib(4-1) = 1 + 2 =3
+                for n step fibonacci series - fib(n-2) + fib(n-1)   */
+
+#include<stdio.h>
+int fibo_func(int step);
+int main(){
+    int n;
+    printf("Enter the number for fibonacchi series you want : \n");
+    scanf("%d",&n);
+    printf("The Fibonacchi series is = %d\t",fibo_func(n));
+    return 0;
+}
+int fibo_func(int step){
+    if (step == 0)
+    {
+        return 0;
+    }
+    if (step == 1)
+    {
+        return 1;
+    }
+    
+    
+    int step_minus1 = fibo_func(step -1);
+    int step_minus2 = fibo_func(step -2);
+    int fiboN = step_minus1 + step_minus2;
+    // printf("%d\t",fiboN);
+    return fiboN;
 }
