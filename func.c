@@ -262,16 +262,21 @@ char temp(int num){
 
 
 
-// make your own POW function
+//make your own POW function
 #include<stdio.h>
-int pow_func(int num);
+int pow_func(int base,int power);
 int main(){
-    int n;
-    printf("Enter a number :\n");
-    scanf("%d",&n);
-    printf("Square of %d is = %d",n,pow_func(n));
+    int a,b;
+    printf("Enter base & power: \n");
+    scanf("%d%d",&a,&b);
+    printf("result is = %d",pow_func(a,b));
     return 0;
 }
-int pow_func(int num){
-    return num * num;
+int pow_func(int base,int power){
+    int result=1;
+    for (int i = 1; i <= power; i++)
+    {
+        result = result * base;
+    }
+    return result;
 }
