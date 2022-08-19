@@ -110,7 +110,7 @@ int swap(int *a , int *b){
     int t = *a;
     *a = *b;
     *b = t;
-}*/
+}
 
 
 
@@ -127,4 +127,69 @@ void doWork(int a,int b,int *sum,int *product,int *avarage){
     *sum = a+b;
     *product = a*b;
     *avarage = (a+b)/2;
+} 
+
+
+
+
+// Given three variables x,y,z, write a function to circularly shift their values to right.
+#include<stdio.h>
+void swap_values(int *a, int *b, int *c);
+int main(){
+    int x=2,y=3,z=4;
+    printf("before swap: x=%d, y=%d, z=%d\n", x,y,z);
+    swap_values(&x,&y,&z);
+    printf("after swap: x=%d, y=%d, z=%d\n", x,y,z);
+    return 0;
+}
+void swap_values(int *a, int *b, int *c){
+    int t;
+    t=*a;
+    *a=*b;
+    *b=*c;
+    *c=t;
+} 
+
+
+
+
+// Define a function that receives weight of a commodity in kilograms & returns the equivalent weight in grams,tons & pounds
+// call the function from main() & print the result in main()
+// kg to ton- divide the mass value by 907.2 || kg to pound- multiply the mass value by 2.205
+#include<stdio.h>
+void converter(float kg, float *kg_gram,float *kg_ton,float *kg_pound);
+int main(){
+    float kg = 5.00,kg_gram,kg_ton,kg_pound;
+    converter(kg,&kg_gram,&kg_ton,&kg_pound);
+    printf(" In Kilogram = %f\n In Grams = %f\n In Tons = %f\n In Pounds = %f", kg,kg_gram,kg_ton,kg_pound);
+    return 0;
+}
+void converter(float kg, float *kg_gram,float *kg_ton,float *kg_pound){
+    *kg_gram = kg * 1000;
+    *kg_ton = kg / 907.2;
+    *kg_pound = kg * 2.205;
+} */
+
+
+
+
+// Write a program in c to find the maximum number between two numbers using a pointer
+#include<stdio.h>
+void find_max(int *a,int *b);
+int main(){
+    int a,b;
+    printf("Enter two numbers: \n");
+    scanf("%d%d",&a,&b);
+    find_max(&a,&b);
+    return 0;
+}
+void find_max(int *a,int *b){
+    if (*a > *b)
+    {
+        printf("%d is greater than %d", *a,*b);
+    }else
+    {
+        printf("%d is greater than %d", *b,*a);
+    }
+    
 }
