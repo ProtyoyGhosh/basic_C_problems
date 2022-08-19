@@ -96,7 +96,7 @@
 
 
 // swap two numbers (if input a=3,b=5 output will be a=5,b=3)
-#include<stdio.h>
+/*#include<stdio.h>
 int swap(int *a , int *b);
 int main(){
     int x=3,y=5;
@@ -110,5 +110,21 @@ int swap(int *a , int *b){
     int t = *a;
     *a = *b;
     *b = t;
-}
+}*/
 
+
+
+// calculate sum,product & avarage of two given number & call them from main function
+#include<stdio.h>
+void doWork(int a,int b,int *sum,int *product,int *avarage);
+int main(){
+    int a=3,b=5,sum,product,avarage;
+    doWork(a,b,&sum,&product,&avarage);
+    printf("sum = %d\nproduct = %d\navarage = %d",sum,product,avarage);
+    return 0;
+}
+void doWork(int a,int b,int *sum,int *product,int *avarage){
+    *sum = a+b;
+    *product = a*b;
+    *avarage = (a+b)/2;
+}
