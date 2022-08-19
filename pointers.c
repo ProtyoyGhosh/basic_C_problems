@@ -50,13 +50,65 @@
 // pointer store the memory address of normal variable & pointer to pointer store memory address of another pointer
 
 // print the value of i with pointer to pointer
+// #include<stdio.h>
+// int main(){
+//     int i = 10;
+//     int *ptr = &i;    /* storing the memory address of i*/
+//     int **pptr = &ptr;  /* storing the memory address of ptr*/
+//     printf("value of i is = %d", **pptr);   /*first going to the memory address to ptr(*) then going to the memory address of i(**)  */
+//     return 0;
+// }
+// two things to remeber * - when we need value, & - when we need address
+
+
+
+
+/*  pointer in function call---- 1.call by value   2.call by reference
+    1.call by value = we pass value of variable as argument (as a copy)
+    2.call by reference = we pass address of variable as argument
+*/
+// #include<stdio.h>
+// void square(int n);
+// void _square(int *n);
+// int main(){
+//     int number = 6;
+//     square(number);
+//     printf("number is = %d\n", number);
+
+//     _square(&number);
+//     printf("number is = %d\n", number);
+//     return 0;
+// }
+
+// // call by value(sending a copy of the variable,doesn't change the actual variable(number) )
+// void square(int n){
+//      n = n * n;
+//      printf("square is = %d\n",n);
+// }
+
+// // call by reference, taking the address as a variable & change the variable(number)
+// void _square(int *n){
+//     *n = (*n) * (*n);
+//     printf("square is = %d\n", *n);
+// }
+
+
+
+
+// swap two numbers (if input a=3,b=5 output will be a=5,b=3)
 #include<stdio.h>
+int swap(int *a , int *b);
 int main(){
-    int i = 10;
-    int *ptr = &i;    /* storing the memory address of i*/
-    int **pptr = &ptr;  /* storing the memory address of ptr*/
-    printf("value of i is = %d", **pptr);   /*first going to the memory address to ptr(*) then going to the memory address of i(**)  */
+    int x=3,y=5;
+    printf("before swap x=%d & y=%d\n",x,y );
+    swap(&x,&y);
+    printf("after swap x=%d & y=%d",x,y );
     return 0;
 }
-// two things to remeber * - when we need value, & - when we need address
+// call by reference
+int swap(int *a , int *b){
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
 
