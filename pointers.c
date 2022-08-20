@@ -168,7 +168,7 @@ void converter(float kg, float *kg_gram,float *kg_ton,float *kg_pound){
     *kg_gram = kg * 1000;
     *kg_ton = kg / 907.2;
     *kg_pound = kg * 2.205;
-} */
+} 
 
 
 
@@ -190,6 +190,38 @@ void find_max(int *a,int *b){
     }else
     {
         printf("%d is greater than %d", *b,*a);
+    }
+    
+}*/
+
+
+
+
+// Write a program that defines a function that calculate power of one number raised to another & factorial value of a number in one cell
+#include<stdio.h>
+void cal_pow_fact(int a,int b,int num,float *pow,int *fact);
+int main(){
+    int a=2,b=3,num=3,fact;
+    float pow;
+    cal_pow_fact(a,b,num,&pow,&fact);
+    printf("power is = %f & fact is = %d\n",pow,fact);
+    return 0;
+}
+void cal_pow_fact(int a,int b,int num,float *pow,int *fact){
+    int result = 1;
+    // calculating power 
+    for ( int i = 1; i <= b; i++)
+    {
+        result = result * a;
+        *pow = result;
+    }
+    
+    // calculating factorial
+    result =1;
+    for (int i = 1; i <= num; i++)
+    {
+        result = result * i;
+        *fact = result;
     }
     
 }
