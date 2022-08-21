@@ -77,3 +77,130 @@ int fibo_func(int step){
     // printf("%d\t",fiboN);
     return fiboN;
 }
+
+
+
+
+// A five digit posetive intiger is entered through keyboard,write a recursive function to calculate sum odf digits of the 5 digit numbers
+#include<stdio.h>
+int sumOf(int num);
+int main(){
+    int n;
+    printf("enter a 5 digit number: ");
+    scanf("%d\n",&n);
+    printf("Sum of digits = %d",sumOf(n));
+    return 0;
+}
+int sumOf(int num){
+    int sum,remainder;
+    if (num != 0)
+    {
+        remainder = num % 10;
+        sum = remainder + sumOf(num/10);
+    }else
+    {
+        return 0;
+    }
+    return sum;
+}
+
+
+
+// A positive intiger is entered through keyboard,write a program to obtain the prime factor of the number recursively
+#include<stdio.h>
+int prime_fact(int,int); 
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    printf("prime factors are: ");
+    prime_fact(num,2);
+    return 0;
+}
+int prime_fact(int num, int i){
+    if (i <= num)
+    {
+        if (num % i == 0)
+        {
+            printf("%d",i);
+            num = num / i;
+        }else
+        {
+            i++; 
+        }
+        prime_fact(num,i);
+    }
+}
+
+
+
+// write a recursive function to obtain the first 25 numbers of a fibonacci sequence
+#include<stdio.h>
+int fibo(int);
+int main(){
+    int terms = 25,i,n=0;
+    for ( i = 1; i <= terms; i++)
+    {
+        printf("The fibonacci sequence: %d\t",fibo(n));
+        n++;
+    }
+    
+    return 0;
+}
+int fibo(int n){
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }else{
+        return fibo(n -1) + fibo(n - 2);
+    }
+    
+}
+
+
+
+
+// write a recursive function to obtain the sum of first 25 natural number
+#include<stdio.h>
+int sum(int n);
+int main(){
+    int num =25,result = 0;
+    result = sum(num);
+    printf("%d",result);
+    return 0;
+}
+int sum(int n){
+    if (n==1)
+    {
+        return 1;
+    }
+    else{
+        return sum(n-1) + n;
+    }
+    
+} 
+
+
+
+
+// a positive intiger is input through keyboard,write a function to find the binary equivalent of this number
+#include<stdio.h>
+int binary_eqi(int n);
+int main(){
+    int num;
+    printf("Enter a number: \n");
+    scanf("%d",&num);
+    printf("Binary equvalent of %d is =%d\n",num,binary_eqi(num));
+    return 0;
+}
+int binary_eqi(int n){
+    if (n == 0)
+    {
+        return 0;
+    }else
+    {
+        return (n % 2) + 10 * binary_eqi(n /2);
+    }
+    
+    
+}
