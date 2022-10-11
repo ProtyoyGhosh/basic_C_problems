@@ -1,5 +1,5 @@
 // print 2 charecter string firstNmae & lastName using for loop
-/*#include <stdio.h>
+#include <stdio.h>
 void printString(char arr[]);
 int main()
 {
@@ -12,7 +12,7 @@ int main()
 }
 void printString(char arr[])
 {
-    for (int i = 0; arr[i] != '\0'; i++) /*beacuse every string finish with a null charecter & also because of it didn't pass array size in function declaration.
+    for (int i = 0; arr[i] != '\0'; i++)
     {
         printf("%c", arr[i]);
     }
@@ -161,7 +161,7 @@ void sliced(char str[], int n, int m)
     }
     newStr[j] = '\0';
     puts(newStr);
-}*/
+}
 
 // write a function to count the occurence of vowels in a string
 #include <stdio.h>
